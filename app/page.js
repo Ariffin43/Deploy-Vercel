@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -25,11 +26,7 @@ export default function Home() {
               How it works?
             </button>
           </div>
-          <img
-            src="foto.avif"
-            alt="Hero"
-            className="mt-12 w-full max-w-2xl mx-auto rounded-lg shadow-lg"
-          />
+          <Image src="/foto.png" alt="Hero" width={700} height={400} className="mt-2 mx-auto rounded-lg shadow-lg" />
         </div>
       </section>
 
