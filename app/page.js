@@ -1,13 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleGetStarted = () => {
-    router.push('/login');
-  };
 
   return (
     <main className="font-sans">
@@ -21,9 +16,11 @@ export default function Home() {
             A complete about-face in its core economy Amsterdam.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <button onClick={handleGetStarted} className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition">
-              Get Started
-            </button>
+            <Link href="/login">
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition">
+                Get Started
+              </button>
+            </Link>
             <button className="bg-white border text-black border-gray-300 px-6 py-2 rounded-full hover:bg-gray-100 transition">
               How it works?
             </button>
