@@ -1,4 +1,14 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
+  const router = useRouter();
+
+  const handleGetStarted = () => {
+    router.push('/login');
+  };
+
   return (
     <main className="font-sans">
       {/* Hero Section */}
@@ -11,7 +21,7 @@ export default function Home() {
             A complete about-face in its core economy Amsterdam.
           </p>
           <div className="mt-6 flex justify-center gap-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition">
+            <button onClick={handleGetStarted} className="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 transition">
               Get Started
             </button>
             <button className="bg-white border text-black border-gray-300 px-6 py-2 rounded-full hover:bg-gray-100 transition">
